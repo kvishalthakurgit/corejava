@@ -22,7 +22,7 @@ public class Java8MapSortingByValueExamples {
 
     //comparingByValue
     unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue())
-        .forEach(x -> sortedMap.put(x.getKey(), x.getValue()));
+        .forEach(entry -> sortedMap.put(entry.getKey(), entry.getValue()));
      
     System.out.println("Sorted Map   : " + sortedMap);
      

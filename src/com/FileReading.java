@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FileReading {
@@ -17,9 +18,10 @@ public class FileReading {
 
             String line;
             while ((line = reader.readLine()) != null) {
-              
+            	
                 batch.add(line);
-
+                //System.out.println(batch);
+                
                 // If the batch size is reached, process the batch
                 if (++count % batchSize == 0) {
                     processBatch(batch);
@@ -44,6 +46,11 @@ public class FileReading {
             System.out.println(++count +" "+line);
         }
         System.out.println("---------------");
+        
+        String s1 = "dsfsdf";
+        String[] split = s1.split("");
+        int i[] = {1,2,3,4,5,6};
+        Arrays.stream(i).boxed().forEach(System.out::println);
     }
 }
 

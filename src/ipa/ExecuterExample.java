@@ -3,9 +3,9 @@ package ipa;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;  
 
-class WorkerThread implements Runnable {  
+class MyWorkerThread implements Runnable {  
     private String message;  
-    public WorkerThread(String s){  
+    public MyWorkerThread(String s){  
         this.message=s;  
     }  
      public void run() {  
@@ -24,7 +24,7 @@ public class ExecuterExample {
 	 public static void main(String[] args) {  
 	        ExecutorService executor = Executors.newFixedThreadPool(10);//creating a pool of 5 threads
 	        for (int i = 1; i < 10; i++) {  
-	            Runnable worker = new WorkerThread("" + i);  
+	            Runnable worker = new MyWorkerThread("" + i);  
 	            executor.execute(worker);//calling execute method of ExecutorService  
 	          }  
 	        executor.shutdown();  

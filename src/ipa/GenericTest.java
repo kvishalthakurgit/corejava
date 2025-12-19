@@ -19,7 +19,7 @@ class Circle extends Shape {
 	}
 }
 
-public class Factory {
+public class GenericTest {
 	public static void drawShapes(List<? extends Shape> lists) {
 		for (Shape s : lists) {
 			s.draw();// calling method of Shape class by child class instance

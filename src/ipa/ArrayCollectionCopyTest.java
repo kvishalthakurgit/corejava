@@ -30,6 +30,9 @@ public class ArrayCollectionCopyTest {
 		List<int[]> list2 = Arrays.asList(arr1);
 		List<int[]> list3 = Arrays.asList(arr2);
 		
+		Integer arr31[] = {1,2,3,4};
+		List<Integer> asList2 = Arrays.asList(arr31);
+		
 		//merge list
 		List<int[]> collect = Stream.concat(list2.stream(), list3.stream()).collect(Collectors.toList());
 		

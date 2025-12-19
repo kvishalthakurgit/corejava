@@ -1,5 +1,6 @@
 package com;
 
+@FunctionalInterface
 interface Sayable{  
     void say(int input);
     //void say1();

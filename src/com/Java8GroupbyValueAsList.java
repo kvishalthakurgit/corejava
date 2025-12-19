@@ -39,6 +39,10 @@ public class Java8GroupbyValueAsList {
                         Collectors.mapping(Java8GroupbyValueAsList::getUserId, Collectors.toList())
                 )
         );
+        
+        productUserInteractions.stream().collect(
+        		Collectors.groupingBy(obj->obj.getProductId(),Collectors.mapping(obj->obj.getUserId(), Collectors.toList()))
+        		);
 
         // Display the result
         productUsersMap.forEach((productId, userIds) -> {

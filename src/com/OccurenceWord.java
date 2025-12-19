@@ -41,7 +41,7 @@ public class OccurenceWord {
 
         // Count occurrences of each string
         for (String str : inputList) {
-            occurrenceMap.put(str, occurrenceMap.getOrDefault(str, 0) + 1);
+            occurrenceMap.put(str, occurrenceMap.getOrDefault(str, 0)    + 1);
         }
 
         return occurrenceMap;

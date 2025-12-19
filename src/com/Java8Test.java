@@ -42,7 +42,7 @@ public class Java8Test {
         });
         
         		Integer total = list.stream().collect(Collectors.summingInt(x -> x));
-        		list.stream().mapToInt(x->x+x);
+        		list.stream().mapToInt(x->x).sum();
 
         System.out.println("Sum of Squares (Sequential): " + sumOfSquares);
 

@@ -25,7 +25,7 @@ public class PermutationNcom {
 			}
 		}
 		
-	}
+	}// 0 1 1 2 3
 }
 //12345
 //54321

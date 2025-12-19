@@ -1,5 +1,7 @@
 package com;
 
+import java.util.Optional;
+
 interface Printable {
 	void print();
 }
@@ -12,6 +14,13 @@ public class StackOverFlowError implements Printable, Showable {
 	public void print() {
 		System.out.println("Hello");
 		StackOverFlowError obj1 = new StackOverFlowError();
+		
+		Optional<String> opt = Optional.of("vishal");
+		
+		opt.ifPresentOrElse(x->{
+			System.out.println(x.toLowerCase());
+		},()->{System.out.println("value");});
+		
 		obj1.print1();
 	}
 	public void print1() {

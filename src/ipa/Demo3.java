@@ -86,11 +86,12 @@ public class Demo3 {
 
 		IntSummaryStatistics collect2 = Arrays.asList(100, 200).stream().map(x -> x > 100 ? x = x - x * 10 / 100 : x)
 				.collect(Collectors.summarizingInt(x -> x));
+		
 		int sum = Arrays.asList(100, 200).stream().map(x -> x > 100 ? x = x - x * 10 / 100 : x)
 				.mapToInt(x -> x.intValue()).sum();
 		System.out.println(sum);
 
-		int sum2 = Arrays.asList("vishal,Thakur").stream().map(x -> x.length()).mapToInt(x -> x).sum();
+		int sum2 = Arrays.asList("vishal,Thakur").stream().mapToInt(x -> x.length()).sum();
 		System.out.println("sum2="+sum2);
 
 		int sum3 = Arrays.asList(10, 20, 30, 50, 60, 70, 80, 90).stream().filter(x -> x < 50).mapToInt(x -> x).sum();

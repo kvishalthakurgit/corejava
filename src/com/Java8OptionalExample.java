@@ -1,8 +1,6 @@
 package com;
 
-import java.util.ArrayList;
 import java.util.Optional;
-import java.util.function.Consumer;
 
 class F1 {
 	public Object m1() {

@@ -8,7 +8,7 @@ public class TryCatchReturnCheck {
 	int i;
 	private static int myMeth() {
 		try {
-			System.out.println(50/0);
+			System.out.println(50/5);
 			return 1;
 		} 
 		catch (NullPointerException |ArithmeticException de) {
@@ -17,7 +17,7 @@ public class TryCatchReturnCheck {
 		} 
 		finally {
 			System.out.println("finally"+i);
-			//return 3;
+			return 3;
 		}
 		//System.out.println("resto fo\f");		//error line
 		//return 8; //error line

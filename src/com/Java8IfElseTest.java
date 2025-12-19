@@ -14,7 +14,7 @@ public class Java8IfElseTest {
                 .map(number -> (number % 2 == 0) ? "Even: " + number : "Odd: " + number)
                 .collect(Collectors.toList());
         
-        asList.stream().map(n-> (n%2==0)? n : n);
+        asList.stream().map(n-> (n%2==0)? n : n+2);
 
         System.out.println(modifiedList);
 	}

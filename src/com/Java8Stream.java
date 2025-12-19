@@ -29,7 +29,7 @@ public class Java8Stream {
 		IntStream.range(1, 15).boxed().collect(Collectors.toList());
 		
 		//logic to skip any value from given input
-		IntStream.range(1, 10).skip(5).forEach(x -> System.out.print(x+","));
+		IntStream.range(1, 10).skip(1).forEach(x -> System.out.print(x+",,"));
 		Stream.of("xy","x","xyz").filter(x->x.length()!=1).collect(Collectors.toList());
 		
 		//logic to sum of given inputs.
@@ -97,6 +97,7 @@ public class Java8Stream {
 	interface Square
 	{
 	    void calculate(int i);
+	    //void cal(int i,int j);
 	    static void m1() {
 	    	
 	    }
