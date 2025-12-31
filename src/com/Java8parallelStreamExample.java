@@ -9,7 +9,7 @@ public class Java8parallelStreamExample {
 		test();
 	}
  public static void  test() {
-	 List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4);
+	 List<Integer> listOfNumbers = Arrays.asList(1, 2);
 	
 	 System.out.println("----------------------------------------------------");
 	 //int sum = listOfNumbers.stream().reduce(5, Integer::sum);

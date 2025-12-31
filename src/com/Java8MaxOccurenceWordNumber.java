@@ -36,8 +36,8 @@ public class Java8MaxOccurenceWordNumber {
 	}
 	
 	private static void java8Logic() {
-		String wordOccurrence = "abvas ssS Sssss ss ss ss bc";
-		String[] words = wordOccurrence.split("\\s+");
+		String wordOccurrence = "abvasssSSsssssssbc";
+		String[] words = wordOccurrence.split("");
 		Map<String, Long> wordCountMap = Arrays.stream(words)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		System.out.println(wordCountMap);
@@ -45,14 +45,11 @@ public class Java8MaxOccurenceWordNumber {
 		 Optional<Long> max = wordCountMap.entrySet().stream()
                 .map(entry->entry.getValue()).max(Comparator.comparingInt(x->x.intValue()));
 		 
-		 int asInt = wordCountMap.entrySet().stream()
-         .map(entry->entry.getValue()).mapToInt(x->x.intValue()).max().getAsInt();
-                
 		System.out.println( max.get());
-		System.out.println(asInt);
 		
-		 Optional<Entry<String, Long>> ent = wordCountMap.entrySet().stream()
-	                .max(Map.Entry.comparingByValue());
+		 Entry<String, Long> entry = wordCountMap.entrySet().stream()
+	                .max(Map.Entry.comparingByValue()).get();
+		 System.out.println(entry.getKey()+""+entry.getValue());
 	}
 
 	private void maxNumberOfWord() {

@@ -16,6 +16,7 @@ public class Java8OptionalExample {
 		System.out.println(i.equals(j));
 		String[] str = new String[10];
 
+		Optional.of(str[5]);
 		Optional<String> checkNull = Optional.ofNullable(str[5]);
 		
 		if (checkNull.isPresent()) { // check for value is present or not

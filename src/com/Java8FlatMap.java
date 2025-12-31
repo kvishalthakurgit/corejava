@@ -19,6 +19,7 @@ public class Java8FlatMap {
      numbers.add(Arrays.asList(5, 6));
      numbers.add(Arrays.asList(7, 8));
      
+     System.out.println(numbers);
      
      // using flatmap() to flatten this list
     List<Integer> collect = numbers.stream()

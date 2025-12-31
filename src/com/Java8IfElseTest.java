@@ -8,7 +8,6 @@ public class Java8IfElseTest {
 	public static void main(String[] args) {
 		List<Integer> asList = Arrays.asList(1, 2, 3, 4, 5);
 		
-		asList.addAll(asList);
 
         List<String> modifiedList = asList.stream()
                 .map(number -> (number % 2 == 0) ? "Even: " + number : "Odd: " + number)

@@ -2,7 +2,7 @@ package com;
 
 public class VolatileExample {
 
-    private static volatile boolean flag = false;
+    private static  boolean flag = false;
 
     public static void main(String[] args) {
         Thread writerThread = new Thread(() -> {
@@ -26,13 +26,13 @@ public class VolatileExample {
         });
 
         // Start the threads
-        writerThread.start();
         readerThread.start();
+        writerThread.start();
 
         try {
             // Wait for both threads to complete
-            writerThread.join();
             readerThread.join();
+            writerThread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

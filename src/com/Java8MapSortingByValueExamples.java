@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
  
 public class Java8MapSortingByValueExamples {
  
@@ -30,15 +31,17 @@ public class Java8MapSortingByValueExamples {
     LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
     unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
         .forEach(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+    
+    //
+    unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).
+    collect(Collectors.toMap(e->e.getKey(), e->e.getValue(),(k,v)->k, ()->new LinkedHashMap<>()));
+    
+    //
+    LinkedHashMap<String, Integer> collect = unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).
+    collect(Collectors.toMap(Map.Entry::getKey, e->e.getValue(),(k,v)->k, LinkedHashMap :: new ));
      
     System.out.println("Reverse Sorted Map   : " + reverseSortedMap);
     
-    //Map.Entry.comparingByKey()
-    LinkedHashMap<String, Integer> reverseSortedMa = new LinkedHashMap<>();
-    unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByKey())
-        .forEach(x -> reverseSortedMa.put(x.getKey(), x.getValue()));
-    
-    System.out.println("sort by key   : " + reverseSortedMa);
   }
  
   private static Map<String, Integer> getUnSortedMap() 

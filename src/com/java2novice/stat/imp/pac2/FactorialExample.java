@@ -9,6 +9,7 @@ public class FactorialExample {
 
 	public static void main(String args[]) {
 		factorial(5);
+		System.out.println(factorial1(5));
 	}
 
 	// using recurson
@@ -20,5 +21,13 @@ public class FactorialExample {
 			System.out.println("i= " + i + " n= " + n);
 			return i;
 		}
+	}
+	
+	static int factorial1(int n) {
+		int num = 1;
+		for(int i =1; i<=n;i++) {
+			num = num*i;
+		}
+		return num;
 	}
 }

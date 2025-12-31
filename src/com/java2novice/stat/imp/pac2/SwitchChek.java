@@ -15,6 +15,16 @@ public class SwitchChek {
             break;  
         case "Football":  
             System.out.println("Let's play Football");  
-        }  
-    }  
+        }
+        
+        swExp();
+    }
+
+	private static void swExp() {
+		String s1 = "vis";
+		boolean b1 = switch(s1) {
+		case "vis","ravi" -> true;
+		default-> false;
+		};
+	}  
 }  

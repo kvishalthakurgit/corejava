@@ -16,7 +16,9 @@ public class Java8ShortArrayReverse {
                 .collect(Collectors.toList());
         
 		List<Integer> collect = Arrays.asList(array).stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
-		collect.forEach(x->System.out.print(x));
+		collect.forEach(x->System.out.print(x+" "));
+		List<Integer> collect2 = Arrays.asList(array).stream().sorted(Collections.reverseOrder()).limit(1).collect(Collectors.toList());
+        System.out.println(" "+collect2);
         
         System.out.println("Original Array: " + Arrays.toString(array));
         System.out.println("Sorted Array in Reverse Order: " + sortedArray);

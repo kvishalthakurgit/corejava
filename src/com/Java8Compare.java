@@ -32,21 +32,20 @@ class User {
 }
 public class Java8Compare{
      public static void main(String []args){
-    	 List<User> userList = new ArrayList<>(Arrays.asList(
-    		        new User("John", 33), 
-    		        new User("Robert", 26), 
-    		        new User("Mark", 26), 
-    		        new User("Brandon", 42)));
+    	 List<UserD1> userList = new ArrayList<>(Arrays.asList(
+    		        new UserD1("John", 33), 
+    		        new UserD1("Robert", 26), 
+    		        new UserD1("Mark", 26), 
+    		        new UserD1("Brandon", 42)));
 
-    	 List<User> sortedList = userList.stream()
+    	 List<UserD1> sortedList = userList.stream()
     			 //.sorted(Comparator.comparing(User:: getName).reversed())
     			 .sorted(Comparator.comparingInt(x->x.getAge()))
-    			 //.filter("Mark"::equals)
     			 .collect(Collectors.toList());
     	 
     	 
 
-    		for(User u1 : sortedList) {
+    		for(UserD1 u1 : sortedList) {
     			System.out.println(u1.getAge()+"   "+u1.getName());
     		}
      }
