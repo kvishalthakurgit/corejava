@@ -11,6 +11,10 @@ public class StackExample {
 		queueStyle();
 		System.out.println("*********************");
 		
+		PriorityQueueTest();
+	}
+
+	private static void PriorityQueueTest() {
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 
 		pq.add(30);
@@ -26,14 +30,14 @@ public class StackExample {
 	}
 
 	private static void stackStyle() {
-		// Stack style
+		// Stack style FIFO
 		Deque<Integer> deque = new ArrayDeque<>();
 		deque.push(10);
 		deque.push(20);
 		deque.push(30);
 		deque.push(40); //add element in head [40, 10, 20, 30]
 		System.out.println(deque);
-		System.out.println(deque.pop());  //40  removes and returns the first element of this deque. 
+		System.out.println(deque.pop());  //40  removes, returns the first element of this deque. 
 		System.out.println(deque); //[10, 20, 30]
 		
 		addBothSide(deque);
